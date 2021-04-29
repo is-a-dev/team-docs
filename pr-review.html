@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <title>is-a.dev Maintainer Docs</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+    body {
+      color: black;
+      font-family: 'Roboto', sans-serif;
+    }
+    </style>
+  </head>
+  <body>
+  <h1 id="reviewing-pull-requests">Reviewing pull requests</h1>
+<p>There are a few things you&#39;ll need to look out for when reviewing pull requests for domain registrations. This list is not exhaustive and will be updated.</p>
+<hr>
+<h3 id="ci-errors">CI errors</h3>
+<p>A lot of minor issues will be caught in the CI checks</p>
+<ul>
+<li>JSON parsing issues</li>
+<li>Schema issues</li>
+</ul>
+<p>If the CI is failing, tag the user and comment on the pr.</p>
+<hr>
+<h3 id="contents-of-the-website">Contents of the website</h3>
+<p>We need to make sure that the contents being hosted via the record being registered is used for malicious purposes.
+To do this, we must try our best to verify the contents of website and if required ask some questions regarding the contents in the PR.</p>
+<hr>
+<h3 id="invalid-email-social-link">Invalid email/social link</h3>
+<p>A way to contact the user is important in case we need to inform the users of some changes to the project.
+Confirm if the email looks valid or the social user name/link works.
+The user should have either an email or a valid social link.</p>
+<p>❌ <code>&quot;owner&quot;: { &quot;username&quot;: &quot;gh-username&quot; }</code> is invalid as it doesn&#39;t contain an email or any social links</p>
+<p>❌ <code>&quot;email&quot;: &quot;28372878+user-name@users.noreply.github.com&quot;</code> is invalid as the email cannot be used</p>
+<p>✅ <code>&quot;owner&quot;: { &quot;username&quot;: &quot;phenax&quot;, &quot;twitter&quot;: &quot;twitter-username&quot; }</code> is valid as it contains a social link</p>
+<p>✅ <code>&quot;owner&quot;: { &quot;username&quot;: &quot;phenax&quot;, &quot;email&quot;: &quot;email@gmail.com&quot; }</code> is valid as it contains an email</p>
+<hr>
+<h3 id="invalid-cname">Invalid CNAME</h3>
+<p>CNAME has to be a hostname. Something like <code>example.com</code>.</p>
+<p>❌ <code>http://example.com</code> is invalid as it contains a protocol <code>https://</code></p>
+<p>❌ <code>example.com/some/path</code> is invalid as it contains the path name <code>/some/path</code></p>
+<p>✅ <code>example.com</code> is valid as it is the hostname of the website</p>
+<hr>
+<h3 id="invalid-a">Invalid A</h3>
+<p>A record has to be an array of ips.</p>
+<p>❌ <code>&quot;A&quot;: &quot;211.211.211.211&quot;</code> is invalid as it must be an array</p>
+<p>❌ <code>&quot;A&quot;: [&quot;example.com&quot;]</code> is invalid as it is not an ip address</p>
+<p>✅ <code>&quot;A&quot;: [&quot;211.211.211.211&quot;, &quot;211.211.211.212&quot;]</code> is valid as it is an array of ips</p>
+<hr>
+<h3 id="invalid-url">Invalid URL</h3>
+<p>The URL must have a protocol (<code>http://</code> or <code>https://</code>) and must be something like <code>https://example.com</code> or <code>https://example.com/some/path</code>.</p>
+<p>❌ <code>example.com</code> is invalid as it doesn&#39;t contain the protocol</p>
+<p>✅ <code>https://example.com/some/path</code> is valid as it contains a protocol</p>
+<hr>
+<h3 id="only-one-record-type">Only one record type</h3>
+<p>Earlier, is-a-dev used to allow for handling https redirections along with CNAME but the way we handle requests has changed since then.
+This is why a record file can only contain one record type. Either <code>CNAME</code> or <code>A</code> or <code>URL</code>.</p>
+<p>❌ <code>&quot;CNAME&quot;: &quot;example.com&quot;, &quot;URL&quot;: &quot;https://something.com&quot;</code> is invalid as it should only contain one type of record, either CNAME or URL.</p>
+
+  </body>
+</html>
