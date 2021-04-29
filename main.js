@@ -1,12 +1,6 @@
 (async () => {
-  var basePath = window.location.href.substr(window.location.href.lastIndexOf("/") + 1),
-    markdown,
-    htmlMarkdown;
-  if (basePath.endsWith(".md")) { 
-    markdown = await (await fetch (`https://raw.githubusercontent.com/is-a-dev/maintainer-docs/main/${basePath}`)).text(); 
-  } else { 
-    markdown = await (await fetch (`https://raw.githubusercontent.com/is-a-dev/maintainer-docs/main/${basePath}.md`)).text(); 
+  const githubJSON = await (await fetch ("https://api.github.com/repos/is-a-dev/maintainer-docs/git/trees/main?recursive=1")).json ();
+  for (i of githubJSON.tree) {
+    if (i.path.endsWith (".md")) document.getElementById ("links").innerHTML += `<a class="link row" href="${i.path}">${i.path}</a>\n<br>\n`;
   }
-  htmlMarkdown = marked (markdown);
-  document.body.innerHTML = htmlMarkdown;
 })();
