@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+body {
+  font-family: 'Fira Code', monospace;
+}
+
+.link {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#welcome-to-the-is-a-dev-maintainer-documentation- {
+  font-size: clamp(20px, 6vw, 50px);
+}
