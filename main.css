@@ -3,6 +3,13 @@
   src: url('./Operator-Mono.woff2') format('woff2');
 }
 
+* {
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+  color: #212529;
+}
+
 body {
   font-family: 'Operator Mono', monospace;
 }
@@ -25,4 +32,40 @@ code {
   color: red;
   font-weight: bold;
   font-size: 25px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.justify-content-center {
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0,0,0,.1);
 }
