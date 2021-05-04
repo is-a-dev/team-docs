@@ -1,7 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@font-face {
+  font-family: 'Operator Mono';
+  src: url('./Operator-Mono.woff2') format('woff2');
+}
 
 body {
-  font-family: 'Fira Code', monospace;
+  font-family: 'Operator Mono', monospace;
+}
+
+code {
+  color: #0984e3;
 }
 
 .link {
