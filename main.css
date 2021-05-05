@@ -3,6 +3,11 @@
   src: url('./Operator-Mono.woff2') format('woff2');
 }
 
+@font-face{
+  font-family: Montserrat;
+  src: url('./Montserrat.woff2') format('woff2')
+}
+
 * {
   line-height: 1.5;
   padding: 0;
@@ -11,11 +16,12 @@
 }
 
 body {
-  font-family: 'Operator Mono', monospace;
+  font-family: Montserrat, monospace;
 }
 
 code {
   color: #0984e3;
+  font-family: 'Operator Mono', Montserrat, monospace;
 }
 
 .link {
