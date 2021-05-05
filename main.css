@@ -25,7 +25,7 @@ code {
 }
 
 #welcome-to-the-is-a-dev-maintainer-documentation- {
-  font-size: clamp(20px, 6vw, 50px);
+  font-size: clamp(19px, 6vw, 50px);
 }
 
 .error {
