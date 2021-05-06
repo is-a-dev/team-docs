@@ -24,40 +24,6 @@ code {
   font-family: 'Operator Mono', Montserrat, monospace;
 }
 
-.link {
-  max-width: 100%;
-  max-height: 100%;
-  margin: 10px;
-}
-
-#welcome-to-the-is-a-dev-maintainer-documentation- {
-  font-size: clamp(19px, 6vw, 50px);
-}
-
-.error {
-  color: red;
-  font-weight: bold;
-  font-size: 25px;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.row {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-}
-
-.justify-content-center {
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
 a {
   color: #007bff;
   text-decoration: none;
@@ -74,4 +40,103 @@ hr {
   margin-bottom: 1rem;
   border: 0;
   border-top: 1px solid rgba(0,0,0,.1);
+}
+
+#welcome-to-the-is-a-dev-maintainer-documentation- {
+  font-size: clamp(19px, 6vw, 50px);
+}
+
+.link {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 10px;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.f-wrap {
+  flex-wrap: wrap;
+}
+
+.loading {
+  width: 80px;
+  animation: rotate 4s linear infinite;
+}
+
+.loading span {
+  width: 32px;
+  height: 32px;
+  margin: 4px;
+  animation: loading 1.5s linear infinite;
+}
+
+.loading span:nth-child(1) {
+  border-radius: 50% 50% 0 50%;
+  background-color: #e77f67;
+  transform-origin: bottom right;
+}
+
+.loading span:nth-child(2) {
+  border-radius: 50% 50% 50% 0;
+  background-color: #778beb;
+  transform-origin: bottom left;
+  animation-delay: .5s;
+}
+.loading span:nth-child(3) {
+  border-radius: 50% 0 50% 50%;
+  background-color: #f8a5c2;
+  transform-origin: top right;
+  animation-delay: 1.5s;
+}
+.loading span:nth-child(4) {
+  border-radius: 0 50% 50% 50%;
+  background-color: #f5cd79;
+  transform-origin: top left;
+  animation-delay: 1s;
+}
+
+@keyframes loading {
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
 }

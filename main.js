@@ -2,7 +2,7 @@
     try {
       var links = [];
       for (i of (await (await fetch ('https://api.github.com/repos/is-a-dev/maintainer-docs/git/trees/main?recursive=1')).json ()).tree) {
-        links.push(`<a class='link row justify-content-center' href='${i.path}'>${i.path}</a> \n <br> \n`);
+        links.push(`<a class='link row container' href='${i.path}'>${i.path}</a> \n <br> \n`);
       }
 
       document.getElementById ('links').innerHTML = links.join ('');
