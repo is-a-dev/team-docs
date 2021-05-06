@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Operator Mono';
-  src: url('./Operator-Mono.woff2') format('woff2');
+  src: url('./Operator-Mono.ttf') format('truetype');
 }
 
 @font-face{
   font-family: Montserrat;
-  src: url('./Montserrat.woff2') format('woff2')
+  src: url('./Montserrat.ttf') format('truetype')
 }
 
 * {
