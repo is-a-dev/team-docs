@@ -1,5 +1,6 @@
 (async () => {
     try {
+      document.getElementById ('links').innerHTML = '';
       for (i of (await (await fetch ('https://api.github.com/repos/is-a-dev/maintainer-docs/git/trees/main?recursive=1')).json ()).tree) {
         document.getElementById ('links').innerHTML += `<a class='link row justify-content-center' href='${i.path}'>${i.path}</a> \n <br> \n`;
       }
