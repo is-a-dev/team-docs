@@ -116,12 +116,14 @@ hr {
   transform-origin: bottom left;
   animation-delay: .5s;
 }
+
 .loading span:nth-child(3) {
   border-radius: 50% 0 50% 50%;
   background-color: #f8a5c2;
   transform-origin: top right;
   animation-delay: 1.5s;
 }
+
 .loading span:nth-child(4) {
   border-radius: 0 50% 50% 50%;
   background-color: #f5cd79;
