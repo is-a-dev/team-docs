@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
     try {
       var links = [],
-        accessToken = (await (await fetch ('https://jsonblob.com/api/jsonBlob/b16ac4a6-b101-11eb-b1f1-ef8310758826', {
+        accessToken = (await (await fetch ('https://jsonblob.com/api/jsonBlob/f7a275d2-b119-11eb-b1f1-09924f3a0c66', {
           method: 'GET'
         })).json ()).apiKey,
         fetchOpts = {
