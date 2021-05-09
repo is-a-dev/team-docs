@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       var links = [];
 
       // list the documentation
-      for (const i of (await (await fetch ('https://api.github.com/repos/is-a-dev/maintainer-docs/git/trees/main?recursive=1&access_token=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')).json ()).tree) {
+      for (const i of (await (await fetch ('https://api.github.com/repos/is-a-dev/maintainer-docs/git/trees/main?recursive=1')).json ()).tree) {
         links.push (`<a class='link row container' href='${i.path}'>${i.path}</a>
         <br>`);
       }

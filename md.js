@@ -5,10 +5,9 @@ import './marked.js';
 document.addEventListener('DOMContentLoaded', async () => {
   try {
     var basePath = window.location.pathname.substr(window.location.pathname.lastIndexOf('/') + 1),
-      accessToken = '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',
-      file = await fetch (`https://raw.githubusercontent.com/is-a-dev/maintainer-docs/main/${basePath.replace(/\.[^/.]+$/, '')}.md?access_token=${accessToken}`);
+      file = await fetch (`https://raw.githubusercontent.com/is-a-dev/maintainer-docs/main/${basePath.replace(/\.[^/.]+$/, '')}.md`);
     if (file.status == 404) {
-      file = await (await fetch (`https://raw.githubusercontent.com/is-a-dev/maintainer-docs/main/${basePath.replace(/\.[^/.]+$/, '')}?access_token=${accessToken}`)).text ();
+      file = await (await fetch (`https://raw.githubusercontent.com/is-a-dev/maintainer-docs/main/${basePath.replace(/\.[^/.]+$/, '')}`)).text ();
     } else if (file.status != 200) {
       file = new Error (`Non 200 Response Code, The Respose Code Is: ${file.status}`);
     } else {
