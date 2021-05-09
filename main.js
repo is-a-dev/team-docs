@@ -3,9 +3,9 @@
 document.addEventListener('DOMContentLoaded', async () => {
     try {
       var links = [],
-        accessToken = await (await fetch ('https://jsonblob.com/api/jsonBlob/b16ac4a6-b101-11eb-b1f1-ef8310758826', {
+        accessToken = (await (await fetch ('https://jsonblob.com/api/jsonBlob/b16ac4a6-b101-11eb-b1f1-ef8310758826', {
           method: 'GET'
-        })).json (),
+        })).json ()).apiKey,
         fetchOpts = {
           method: 'GET',
           headers: {
