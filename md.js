@@ -5,9 +5,20 @@ import './marked.js';
 document.addEventListener('DOMContentLoaded', async () => {
   try {
     var basePath = window.location.pathname.substr(window.location.pathname.lastIndexOf('/') + 1),
-      file = await fetch (`https://raw.githubusercontent.com/is-a-dev/maintainer-docs/main/${basePath.replace(/\.[^/.]+$/, '')}.md`);
+      accessToken = await (await fetch ('https://jsonblob.com/api/jsonBlob/b16ac4a6-b101-11eb-b1f1-ef8310758826', {
+        method: 'GET'
+      })).json (),
+      fetchOpts = {
+        method: 'GET',
+        withCredentials: true,
+        credentials: 'include',
+        headers: {
+          'Authorization': `token ${accessToken}`
+        }
+      }
+      file = await fetch (`https://raw.githubusercontent.com/is-a-dev/maintainer-docs/main/${basePath.replace(/\.[^/.]+$/, '')}.md`, fetchOpts);
     if (file.status == 404) {
-      file = await (await fetch (`https://raw.githubusercontent.com/is-a-dev/maintainer-docs/main/${basePath.replace(/\.[^/.]+$/, '')}`)).text ();
+      file = await (await fetch (`https://raw.githubusercontent.com/is-a-dev/maintainer-docs/main/${basePath.replace(/\.[^/.]+$/, '')}`, fetchOpts)).text ();
     } else if (file.status != 200) {
       file = new Error (`Non 200 Response Code, The Respose Code Is: ${file.status}`);
     } else {
