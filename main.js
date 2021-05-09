@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.getElementById ('contributers').innerHTML += `
         <div class='column maintainer'>
           <a href='${i.html_url}'>
-            <img src='${i.avatar_url}' class='userImg' alt='${i.login}'s User Profile Image'></img>
+            <img src='${i.avatar_url}' alt='${i.login}'s User Profile Image'></img>
             <span>${i.login}</span>
           </a>
         </div>`;
@@ -34,9 +34,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     } catch (e) {
         document.body.innerHTML = `<span class='error'>${e} <br> <br> 
-        Please report this issue <a href='https://github.com/is-a-dev/maintainer-docs/issues/new?title=${e}&body=What Page Were You On When This Occured: ***${window.location.href}*** 
-        <br> 
-        What Was Your Error: ***${e}***'>on GitHub</a> or <a href='https://dsc.gg/is-a.dev'>on Discord</a></span>`;
+            Please report this issue <a href='https://github.com/is-a-dev/maintainer-docs/issues/new?title=${e}&body=What Page Were You On When This Occured: ***${window.location.href}*** <br> What Was Your Error: ***${e}***'>
+              on GitHub
+            </a> or <a href='https://dsc.gg/is-a.dev'>
+              on Discord
+              </a>
+          </span>`;
         throw e;
     }
 });
