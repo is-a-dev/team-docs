@@ -8,6 +8,13 @@
   src: url('./Montserrat.ttf') format('truetype')
 }
 
+:root {
+    --code-color: #0fbcf9;
+    --code-font: 'Operator Mono';
+    --main-font: Montserrat;
+    --second-font: monospace;
+}
+
 * {
   line-height: 1.5;
   padding: 0;
@@ -16,12 +23,12 @@
 }
 
 body {
-  font-family: Montserrat, monospace;
+  font-family: var(--main-font), var(--second-font);
 }
 
 code {
-  color: #0fbcf9;
-  font-family: 'Operator Mono', Montserrat, monospace;
+  color: var(--code-color);
+  font-family: var(--code-font), var(--main-font), var(--second-font);
 }
 
 a {
