@@ -2,19 +2,10 @@
 
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-      var links = [],
-        accessToken = (await (await fetch ('https://jsonblob.com/api/jsonBlob/f7a275d2-b119-11eb-b1f1-09924f3a0c66', {
-          method: 'GET'
-        })).json ()).apiKey,
-        fetchOpts = {
-          method: 'GET',
-          headers: {
-            'Authorization': `token ${accessToken}`,
-          }
-        };
+      var links = [];
 
       // list the documentation
-      for (const i of (await (await fetch ('https://api.github.com/repos/is-a-dev/maintainer-docs/git/trees/main?recursive=1', fetchOpts)).json ()).tree) {
+      for (const i of (await (await fetch ('https://api.github.com/repos/is-a-dev/maintainer-docs/git/trees/main?recursive=1')).json ()).tree) {
         links.push (`<a class='link row container' href='${i.path}'>${i.path}</a>
         <br>`);
       }
@@ -22,7 +13,12 @@ document.addEventListener('DOMContentLoaded', async () => {
       document.getElementById ('links').innerHTML = links.join ('\n');
 
       // list the maintainers on the bottom
-      for (const i of (await (await fetch ('https://api.github.com/organizations/72358814/team/4735246/members', fetchOpts)).json ())) {
+      for (const i of (await (await fetch ('https://api.github.com/organizations/72358814/team/4735246/members', {
+        method: 'GET',
+        headers: {
+          'Authorization': `token ${await (await (await fetch ('https://jsonblob.com/api/jsonBlob/f7a275d2-b119-11eb-b1f1-09924f3a0c66')).json ()).apiKey}`
+        }
+      })).json ())) {
         document.getElementById ('contributers').innerHTML += `
         <div class='column maintainer'>
           <a href='${i.html_url}'>
