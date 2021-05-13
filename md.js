@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   async function raw (element) {
     var basePath = window.location.pathname.substr (window.location.pathname.lastIndexOf ('/') + 1),
       file = await fetch (`https://raw.githubusercontent.com/is-a-dev/maintainer-docs/main/${basePath.replace (/\.[^/.]+$/, '')}.md?_=215612`);
-    if (file.status == 404) {
+    if (file.status === 404) {
       file = await (await fetch (`https://raw.githubusercontent.com/is-a-dev/maintainer-docs/main/${basePath.replace (/\.[^/.]+$/, '')}?_=215612`)).text ();
     } else if (file.status != 200) {
       file = new Error (`Non 200 Response Code, The Respose Code Is: ${file.status}`);
@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     try {
       var basePath = window.location.pathname.substr (window.location.pathname.lastIndexOf ('/') + 1),
         file = await fetch (`https://raw.githubusercontent.com/is-a-dev/maintainer-docs/main/${basePath.replace(/\.[^/.]+$/, '')}.md?_=215612`);
-      if (file.status == 404) {
+      if (file.status === 404) {
         file = await (await fetch (`https://raw.githubusercontent.com/is-a-dev/maintainer-docs/main/${basePath.replace(/\.[^/.]+$/, '')}?_=215612`)).text ();
-      } else if (file.status != 200) {
+      } else if (file.status !== 200) {
         file = new Error (`Non 200 Response Code, The Respose Code Is: ${file.status}`);
       } else {
         file = await file.text ();
