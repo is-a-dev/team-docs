@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     } else {
       file = await file.text ();
     }
-    document.querySelector (element).innerHTML = `<pre>${file}</pre>`;
+    document.querySelector (element).innerHTML = `<pre>${file.replace (/\</g, '&lt;')}</pre>`;
   }
   async function md (element) {
     try {
