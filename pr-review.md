@@ -40,6 +40,8 @@ CNAME has to be a hostname. Something like `example.com`.
 
 ❌ `example.com/some/path` is invalid as it contains the path name `/some/path`
 
+❌ `example.com:3302` is invalid as it contains the port number
+
 ✅ `example.com` is valid as it is the hostname of the website
 
 ---
