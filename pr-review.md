@@ -1,9 +1,9 @@
-# Reviewing pull requests
+# Reviewing Pull Requests
 There are a few things you'll need to look out for when reviewing pull requests for domain registrations. This list is not exhaustive and will be updated.
 
 ---
 
-### CI errors
+### CI Errors
 A lot of minor issues will be caught in the CI checks
 * JSON parsing issues
 * Schema issues
@@ -18,16 +18,16 @@ To do this, we must try our best to verify the contents of website and if requir
 
 ---
 
-### Invalid email/social link
+### Invalid Email/Social Link
 A way to contact the user is important in case we need to inform the users of some changes to the project.
 Confirm if the email looks valid or the social user name/link works.
 The user should have either an email or a valid social link.
 
-❌ `"owner": { "username": "gh-username" }` is invalid as it doesn't contain an email or any social links
+❌ `"owner": { "username": "phenax" }` is invalid as it doesn't contain an email or any social links
 
-❌ `"email": "28372878+user-name@users.noreply.github.com"` is invalid as the email cannot be used
+❌ `"owner": { "username": "phenax", "email": "28372878+user-name@users.noreply.github.com"}` is invalid as the email cannot be used
 
-✅ `"owner": { "username": "phenax", "twitter": "twitter-username" }` is valid as it contains a social link
+✅ `"owner": { "username": "phenax", "email": "", "twitter": "twitter-username" }` is valid as it contains a social link
 
 ✅ `"owner": { "username": "phenax", "email": "email@gmail.com" }` is valid as it contains an email
 
@@ -66,9 +66,12 @@ The URL must have a protocol (`http://` or `https://`) and must be something lik
 
 ---
 
-### Only one record type
+### Only A Few Record Types
 Earlier, is-a-dev used to allow for handling https redirections along with CNAME but the way we handle requests has changed since then.
-This is why a record file can only contain one record type. Either `CNAME` or `A` or `URL`.
+This is why a record file can only contain a few record types. Either `CNAME` or `A` or `URL`, `MX` cannot be used with `CNAME` and `TXT` can be used with any other record type.
+One caveat with `TXT` records is that it can only hold one value at a time.
 
-❌ `"CNAME": "example.com", "URL": "https://something.com"` is invalid as it should only contain one type of record, either CNAME or URL.
-
+❌ `"CNAME": "example.com", "URL": "https://something.com"` is invalid as it should only contain one type of record, either `CNAME` or `URL`.
+❌ `"CNAME": "example.com", "MX": [ "mx1.example.com", "mx2.example.com" ]` is invalid as it cannot contain `CNAME` and `MX` at the same time.
+❌ `"CNAME": "https://example.com/", "TXT": [ "TXT record 1", "TXT record 2" ]` is invalid as the `TXT` record must be a string and not an array.
+✅ `"URL": "https://example.com/", "MX": [ "mx1.example.com", "mx2.example.com" ]` is valid as it only contains `URL` and `MX` records.
