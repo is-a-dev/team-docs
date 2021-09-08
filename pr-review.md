@@ -23,13 +23,13 @@ A way to contact the user is important in case we need to inform the users of so
 Confirm if the email looks valid or the social user name/link works.
 The user should have either an email or a valid social link.
 
-❌ `"owner": { "username": "phenax" }` is invalid as it doesn't contain an email or any social links
+❌ `{ "username": "phenax" }` is invalid as it doesn't contain an email or any social links
 
-❌ `"owner": { "username": "phenax", "email": "28372878+user-name@users.noreply.github.com"}` is invalid as the email cannot be used
+❌ `"email": "28372878+user-name@users.noreply.github.com"` is invalid as the email cannot be used
 
-✅ `"owner": { "username": "phenax", "email": "", "twitter": "twitter-username" }` is valid as it contains a social link
+✅ `"twitter": "twitter-username"` is valid as it contains a social link
 
-✅ `"owner": { "username": "phenax", "email": "email@gmail.com" }` is valid as it contains an email
+✅ `"email": "email@gmail.com"` is valid as it contains an email
 
 ---
 
@@ -72,6 +72,9 @@ This is why a record file can only contain a few record types. Either `CNAME` or
 One caveat with `TXT` records is that it can only hold one value at a time.
 
 ❌ `"CNAME": "example.com", "URL": "https://something.com"` is invalid as it should only contain one type of record, either `CNAME` or `URL`.
+
 ❌ `"CNAME": "example.com", "MX": [ "mx1.example.com", "mx2.example.com" ]` is invalid as it cannot contain `CNAME` and `MX` at the same time.
+
 ❌ `"CNAME": "https://example.com/", "TXT": [ "TXT record 1", "TXT record 2" ]` is invalid as the `TXT` record must be a string and not an array.
+
 ✅ `"URL": "https://example.com/", "MX": [ "mx1.example.com", "mx2.example.com" ]` is valid as it only contains `URL` and `MX` records.
