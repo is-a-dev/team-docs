@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       document.getElementById ('links').innerHTML = links.join ('\n');
 
       // list the maintainers on the bottom
-      for (const i of (await (await fetch ('https://api.github.com/organizations/72358814/team/4735246/members', {
+      for (const i of (await (await fetch ('https://api.github.com/orgs/is-a-dev/members', {
         method: 'GET',
         headers: {
           'Authorization': `token ${await (await (await fetch ('https://jsonblob.com/api/jsonBlob/f7a275d2-b119-11eb-b1f1-09924f3a0c66')).json ()).apiKey}`
