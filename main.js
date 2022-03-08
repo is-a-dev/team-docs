@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       for (const i of (await (await fetch ('https://api.github.com/orgs/is-a-dev/members', {
         method: 'GET',
         headers: {
-          'Authorization': `token ${await fetch ('https://raw.githubusercontent.com/is-a-dev/maintainer-docs/gh-pages/token.txt').text()}`
+          'Authorization': `token ${await fetch ('https://raw.githubusercontent.com/is-a-dev/maintainer-docs/gh-pages/token.txt').text().replace('-', '')}`
         }
       })).json ())) {
         document.getElementById ('contributers').innerHTML += `
