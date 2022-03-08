@@ -18,6 +18,20 @@ To do this, we must try our best to verify the contents of website and if requir
 
 ---
 
+### Ownership of the document
+Make sure that any document being updated, has the correct owner. If someone tries to edit a cname in an already existing file, check if the user shown with git blame, matches the user who created the edit pull request. In case of a mismatch, let them know that your user doesn't match the author and they should either use the original user to create a new pr or ask them to approve the pr using the original user account.
+
+---
+
+### Abuse reports
+In case anyone reports a domain for being abusive -
+* Ask the person reporting for some screenshots and adequate proof. If they don't you can not act on the report
+* Create a pull request removing the reported domain json file
+* Tag the owner of that domain json file (use git blame) and use email/social link provided to inform them
+* Give them 1 day to respond and then remove the record
+
+---
+
 ### Invalid Email/Social Link
 A way to contact the user is important in case we need to inform the users of some changes to the project.
 Confirm if the email looks valid or the social user name/link works.
@@ -78,3 +92,9 @@ One caveat with `TXT` records is that it can only hold one value at a time.
 ❌ `"CNAME": "https://example.com/", "TXT": [ "TXT record 1", "TXT record 2" ]` is invalid as the `TXT` record must be a string and not an array.
 
 ✅ `"URL": "https://example.com/", "MX": [ "mx1.example.com", "mx2.example.com" ]` is valid as it only contains `URL` and `MX` records.
+
+---
+
+### Sub-sub domains
+Make sure that any sub-sub-domain registered is owned by the user handling the subdomain.
+Example - If someone is trying to register `blog.example.is-a.dev`, make sure that `example.is-a.dev` is owned by the same user.
