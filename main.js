@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       for (const i of (await (await fetch ('https://api.github.com/orgs/is-a-dev/members', {
         method: 'GET',
         headers: {
-          'Authorization': `token ${await (await (await fetch ('https://jsonblob.com/api/jsonBlob/f7a275d2-b119-11eb-b1f1-09924f3a0c66')).json ()).apiKey}`
+          'Authorization': `token ${await fetch ('https://raw.githubusercontent.com/is-a-dev/maintainer-docs/gh-pages/token.txt').text()}`
         }
       })).json ())) {
         document.getElementById ('contributers').innerHTML += `
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
 
     } catch (e) {
-        document.body.innerHTML = `<span class='error'>${e} <br> <br> 
+        document.write`<span class='error'>${e} <br> <br> 
             Please report this issue <a href='https://github.com/is-a-dev/maintainer-docs/issues/new?title=${e}&body=What Page Were You On When This Occured: ***${window.location.href}*** <br> What Was Your Error: ***${e}***'>
               on GitHub
             </a> or <a href='https://dsc.gg/is-a.dev'>
