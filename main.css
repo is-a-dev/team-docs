@@ -1,120 +1,110 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
-@import url('https://cdn.mtgsquad-dev.com/TheBotlyNoob/Operator-Mono/main.css');
-
-:root {
-    --code-color: #0fbcf9;
-    --code-font: 'Operator Mono';
-    --main-font: 'Ubuntu Mono';
-    --second-font: monospace;
-}
-
 * {
-  line-height: 1.5;
-  padding: 0;
-  margin: 0;
-  color: #212529;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+    color: #212529;
 }
 
 body {
-  font-family: var(--main-font), var(--second-font);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 code {
-  color: var(--code-color);
-  font-family: var(--code-font), var(--main-font), var(--second-font);
+    color: darkblue;
+    font-family: "Lucida Console", Arial, Helvetica, sans-serif;
 }
 
 a {
-  color: #007bff;
-  text-decoration: none;
-  background-color: transparent;
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
 }
 
 a:hover {
-  cursor: pointer;
-  text-decoration: underline;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 hr {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border: 0;
-  border-top: 1px solid rgba(0,0,0,.1);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 footer {
-  margin-top: 200px;
+    margin-top: 200px;
 }
 
 #welcome-to-the-is-a-dev-maintainer-documentation- {
-  font-size: clamp(19px, 6vw, 50px);
+    font-size: clamp(19px, 6vw, 50px);
 }
 
 .link {
-  max-width: 100%;
-  max-height: 100%;
-  margin: 10px;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 10px;
 }
 
 .error {
-  color: red;
-  font-weight: bold;
-  font-size: 25px;
+    color: red;
+    font-weight: bold;
+    font-size: 25px;
 }
 
 .text-center {
-  text-align: center;
+    text-align: center;
 }
 
 .row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
 }
 
 .justify-content-center {
-  justify-content: center;
+    justify-content: center;
 }
 
 .align-items-center {
-  align-items: center;
+    align-items: center;
 }
 
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 .column {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .d-flex {
-  display: flex;
+    display: flex;
 }
 
 .flex-wrap {
-  flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .maintainer {
-  padding: 20px;
+    padding: 20px;
 }
 
 .maintainer span {
-  clear: both;
-  display: block;
+    clear: both;
+    display: block;
 }
 
 .maintainer img {
-  width: 75px;
-  height: 75px;
-  border-radius: 50%;
-  display: inline-block;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    display: inline-block;
 }
