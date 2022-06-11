@@ -1,7 +1,7 @@
 Your PR has been created! Please now wait for a maintainer to approve it.
 
 ## Made a mistake in the record?
-Don't worry, you can edit the changes in your repo and they should automatically be added to this PR.=
+Don't worry, you can edit the changes in your repo and they should automatically be added to this PR.
 
 ## Love/Hate the service?
 **Love it?** Leave it a **star**! Also consider donating so that I can keep this service running forever!
