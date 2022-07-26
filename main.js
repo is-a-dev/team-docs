@@ -1,46 +1,24 @@
-"use strict";
-
 document.addEventListener("DOMContentLoaded", async () => {
-    /**
-     * const headers = {
-        Authorization: `token ${(
-            await fetch(
-                "https://raw.githubusercontent.com/is-a-dev/maintainer-docs/gh-pages/token.txt"
-            ).then((r) => r.text())
-        ).replace(/\-/g, "")}`,
-    };
-     */
-
-    let links = [];
+    let links = document.getElementById("links");
 
     // list the documentation
-    for (const i of (
+    for (const file of (
         await fetch(
-            "https://api.github.com/repos/is-a-dev/maintainer-docs/git/trees/main?recursive=1" // ,{ headers }
-            
+            "https://api.github.com/repos/is-a-dev/maintainer-docs/git/trees/main?recursive=1"
         ).then((res) => res.json())
     ).tree) {
-        links.push(
-            `<a class='link' href='${i.path}'>${i.path}</a><br>`
-        );
+        links.innerHTML += `<a class="link" href="https://github.com/is-a-dev/maintainer-docs/blob/main/${file.path}">${file.path}</a>`;
     }
 
-    document.getElementById("links").innerHTML = links.join("\n");
-
-    // list the maintainers on the bottom
-    for (const i of await (
-        await fetch("https://api.github.com/orgs/is-a-dev/members")
-        /**
-         * , {
-            headers,
-        }
-         */
-    ).json()) {
-        document.getElementById("maintainers").innerHTML += `
-        <div class='maintainer'>
-          <a href='${i.html_url}'>
-            <img src='${i.avatar_url}' alt='${i.login}'s User Profile Image'></img>
-            <span>${i.login}</span>
+    // list the team members on the bottom
+    for (const member of await fetch(
+        "https://api.github.com/orgs/is-a-dev/members"
+    ).then((res) => res.json())) {
+        document.getElementById("team").innerHTML += `
+        <div class="member">
+          <a href="${member.html_url}">
+            <img src="${member.avatar_url}" alt="${member.login}" />
+            <span>${member.login}</span>
           </a>
         </div>`;
     }
