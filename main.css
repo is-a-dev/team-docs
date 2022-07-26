@@ -13,13 +13,13 @@
 #links {
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    gap: 2px;
 }
 
 .link {
     font-size: 26px;
     display: block;
-    margin: 20px 0;
+    margin: 5px;
 }
 
 h2 {
@@ -49,4 +49,31 @@ h2 {
     width: 75px;
     height: 75px;
     border-radius: 100px;
+}
+
+.guides {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 0px;
+    height: 225px;
+}
+
+.guides > div {
+    width: 200px;
+    height: 275px;
+    background: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 0px 7px 13px 0px rgba(0,0,0,0.35);
+    -webkit-box-shadow: 0px 7px 13px 0px rgba(0,0,0,0.35);
+    -moz-box-shadow: 0px 7px 13px 0px rgba(0,0,0,0.35);
+}
+
+h3 {
+    font-size: 26px;
 }
