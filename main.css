@@ -1,24 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Mono&display=swap");
 
 .container {
-    font-family: 'Oswald', sans-serif;
+    font-family: "Oswald", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 25px;
     width: 100vw;
     overflow-x: hidden;
-}
-
-h1 {
-    font-size: 46px;
-}
-h2 {
-    font-size: 40px;
-}
-
-code {
-    font-family: 'Roboto Mono', monospace;
 }
 
 #links {
@@ -29,9 +18,15 @@ code {
 
 .link {
     font-size: 26px;
+    display: block;
+    margin: 20px 0;
 }
 
-#maintainers {
+h2 {
+    margin-top: 100px;
+}
+
+#team {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -39,18 +34,18 @@ code {
     flex-wrap: wrap;
 }
 
-.maintainer {
+.member {
     width: 150px;
     height: 100px;
 }
 
-.maintainer a {
+.member a {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.maintainer > a > img {
+.member > a > img {
     width: 75px;
     height: 75px;
     border-radius: 100px;
