@@ -1,110 +1,57 @@
-* {
-    line-height: 1.5;
-    padding: 0;
-    margin: 0;
-    color: #212529;
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Mono&display=swap');
+
+.container {
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
+h1 {
+    font-size: 46px;
+}
+h2 {
+    font-size: 40px;
 }
 
 code {
-    color: darkblue;
-    font-family: "Lucida Console", Arial, Helvetica, sans-serif;
+    font-family: 'Roboto Mono', monospace;
 }
 
-a {
-    color: #007bff;
-    text-decoration: none;
-    background-color: transparent;
-}
-
-a:hover {
-    cursor: pointer;
-    text-decoration: underline;
-}
-
-hr {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    border: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-footer {
-    margin-top: 200px;
-}
-
-#welcome-to-the-is-a-dev-maintainer-documentation- {
-    font-size: clamp(19px, 6vw, 50px);
+#links {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
 }
 
 .link {
-    max-width: 100%;
-    max-height: 100%;
-    margin: 10px;
+    font-size: 26px;
 }
 
-.error {
-    color: red;
-    font-weight: bold;
-    font-size: 25px;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.row {
+#maintainers {
     display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-}
-
-.justify-content-center {
-    justify-content: center;
-}
-
-.align-items-center {
+    flex-direction: row;
     align-items: center;
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.column {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
-.d-flex {
-    display: flex;
-}
-
-.flex-wrap {
+    gap: 7.5px;
     flex-wrap: wrap;
 }
 
 .maintainer {
-    padding: 20px;
+    width: 150px;
+    height: 100px;
 }
 
-.maintainer span {
-    clear: both;
-    display: block;
+.maintainer a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.maintainer img {
+.maintainer > a > img {
     width: 75px;
     height: 75px;
-    border-radius: 50%;
-    display: inline-block;
+    border-radius: 100px;
 }
