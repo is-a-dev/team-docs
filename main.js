@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     // list the documentation
     for (const file of (
         await fetch(
-            "https://api.github.com/repos/is-a-dev/maintainer-docs/git/trees/main?recursive=1"
+            "https://api.github.com/repos/is-a-dev/team-docs/git/trees/main?recursive=1"
         ).then((res) => res.json())
     ).tree) {
-        links.innerHTML += `<a class="link" href="https://github.com/is-a-dev/maintainer-docs/blob/main/${file.path}">${file.path}</a>`;
+        links.innerHTML += `<a class="link" href="https://github.com/is-a-dev/team-docs/blob/main/${file.path}">${file.path}</a>`;
     }
 
     // list the team members on the bottom
