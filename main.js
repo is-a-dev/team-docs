@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     ).then((res) => res.json())) {
         document.getElementById("team").innerHTML += `
         <div class="member">
-          <a href="${member.html_url}">
+          <a target="_blank" href="${member.html_url}">
             <img src="${member.avatar_url}" alt="${member.login}" />
             <span>${member.login}</span>
           </a>
