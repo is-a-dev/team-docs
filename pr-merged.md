@@ -12,15 +12,15 @@ If your domain points to a server you own, add `domain-name.is-a.dev` to your se
 * Give it some time to reflect and you should be good to go
 
 ## Need help with your domain?
-If you are having trouble setting up your domain, [create an issue](https://github.com/is-a-dev/register/issues/new/choose). I will try my best to get back to you asap!
+If you are having trouble setting up your domain, [create an issue](https://github.com/is-a-dev/register/issues/new/choose), or [join our Discord](https://discord.gg/rT8xcmQSBu). We will try our best to get back to you asap!
 
 ## Made a mistake in the record?
 Don't worry, you can create a new pull request with the corrections
 
 ## Love/Hate the service?
-**Love it?** Leave it a **star**! Also consider donating so that I can keep this service running forever!
+**Love it?** Leave it a **star**! Also consider donating so that we can keep this service running forever!
 
-**Hate it?** Please leave your feedback by [creating an issue](https://github.com/is-a-dev/register/issues/new/choose). I would really like to keep improving this service for other users.
+**Hate it?** Please leave your feedback by [creating an issue](https://github.com/is-a-dev/register/issues/new/choose). We would really like to keep improving this service for other users.
 
 ## Wanna support this project?
 
