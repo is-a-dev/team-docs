@@ -3,7 +3,6 @@ Just wait for a maintainer to merge it and then you can start using your domain!
 
 ---
 
-### FAQ
 **Made a mistake in the record?** Don't worry, you can make those changes in your fork and it will be automatically added to this pull request.
 
 ---
