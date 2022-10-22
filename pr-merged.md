@@ -19,7 +19,6 @@ If your domain points to a server you own, add your-domain.is-a.dev to your doma
 
 ---
 
-### FAQ
 **Need help with your domain?** If you are having trouble setting up your domain, please [create an issue](https://github.com/is-a-dev/register/issues/new/choose) and we will try and help you as soon as possible!
 
 **Made a mistake in the record?** Don't worry, you can create a new pull request with the corrections.
