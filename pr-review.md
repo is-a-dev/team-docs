@@ -81,7 +81,7 @@ The URL must have a protocol (`http://` or `https://`) and must be something lik
 
 ---
 
-### Only a few record types
+### Valid Record Types
 Earlier, is-a-dev used to allow for handling HTTPS redirections along with CNAME but the way we handle requests has changed since then.
 
 This is why a record file can only contain a few record types. Either `A`, `CNAME`, `MX` or `URL` cannot be used with `CNAME`.
