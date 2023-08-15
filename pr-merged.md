@@ -8,7 +8,7 @@
 Just follow the steps below and you can start using your domain!
 
 #### Hosting by Is-a.dev
-Visit (https://manage.is-a.dev/domains)[https://manage.is-a.dev/domains] select the edit button next to your domain. ( Don't worry if its not listed our system updates periodically.) 
+Visit https://manage.is-a.dev/domains select the edit button next to your domain. ( Don't worry if its not listed our system updates periodically.) 
 Click manage files then you will be given your FTP credentials and access to the online file manager [WIP].
 
 
