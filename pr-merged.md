@@ -8,12 +8,12 @@
 Just follow the steps below and you can start using your domain!
 
 #### GitHub Pages
-- Go to your GitHub repository that you use for your is-a.dev domain
-- Click on the Settings tab
-- Click on the Pages link in the sidebar
+- Go to your GitHub repository that you use for your is-a.dev domain.
+- Click on the Settings tab.
+- Click on the Pages link in the sidebar.
 - In the custom domain option, enter the domain you registered.
-- Check the `Enforce HTTPS` checkbox
-- Give your domain some time (~24 hours) for the changes to propagate
+- Check the `Enforce HTTPS` checkbox.
+- Give your domain some time (~24 hours) for the changes to propagate.
 - Enjoy your domain!
 
 #### Server Owners
