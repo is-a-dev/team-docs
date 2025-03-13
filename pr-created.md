@@ -5,4 +5,4 @@ Your pull request has been opened! Please wait for a maintainer to merge it and 
 
 ---
 
-**Made a mistake in the file?** Don't worry, you can make changes in your fork and it will update your pull request.
+**Made a mistake in your file?** Don't worry, you can make changes in your fork and it will update your pull request.
