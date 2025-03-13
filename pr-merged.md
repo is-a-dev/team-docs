@@ -1,6 +1,6 @@
 ## Pull Request Merged
 
-<a href="https://www.buymeacoffee.com/phenax" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me a Coffee" height="28" width="119"></a> <a href="https://liberapay.com/phenax" target="_blank"><img src="https://img.shields.io/badge/liberapay-donate-yellow.svg?style=for-the-badge" alt="Liberapay"></a>
+💸 [Donate](https://donate.is-a.dev) 💖 [Sponsor](https://github.com/sponsors/wdhdev)
 
 ---
 
@@ -23,4 +23,4 @@ If your domain points to a server you own, add your-domain.is-a.dev to your doma
 
 **Need help with your domain?** If you have troubles setting up your domain, please [create an issue](https://github.com/is-a-dev/register/issues/new/choose) and we will try and help you as soon as possible!
 
-**Made a mistake in the records?** Don't worry, you can create a new pull request with the corrections.
+**Made a mistake in your file?** Don't worry, you can create a new pull request with any corrections.
